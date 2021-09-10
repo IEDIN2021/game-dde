@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : maria_db:3306
--- Généré le : ven. 10 sep. 2021 à 14:37
+-- Généré le : ven. 10 sep. 2021 à 14:54
 -- Version du serveur : 10.5.11-MariaDB-1:10.5.11+maria~focal
 -- Version de PHP : 7.4.20
 
@@ -138,6 +138,14 @@ ALTER TABLE `pnj`
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `arme`
+--
+ALTER TABLE `arme`
+  ADD CONSTRAINT `arme_ibfk_1` FOREIGN KEY (`id`) REFERENCES `hero` (`id`),
+  ADD CONSTRAINT `arme_ibfk_2` FOREIGN KEY (`id`) REFERENCES `pnj` (`id`),
+  ADD CONSTRAINT `arme_ibfk_3` FOREIGN KEY (`id`) REFERENCES `monstre` (`id`);
 
 --
 -- Contraintes pour la table `hero`
