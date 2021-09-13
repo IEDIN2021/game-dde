@@ -1,40 +1,46 @@
 <?php
-Class Perso {
-    $ptVie = null;
-    $ptEnd = null;
-    $sous = null;
-    $ptFor = null;
-    $ptExp = null;
-    $armeEquipe = null;
-    $armes = [];
+
+abstract class Perso {
+    protected $ptVie = null;
+    protected $ptEndurance = null;
+    protected $sous = null;
+    protected $ptForce = null;
+    protected $armeEquipe = null;
+    protected $armes = [];
 
     public function __construct($arme) {
-        this.arme = $arme;
+        $this->arme = $arme;
     }
 }
 
 class Hero extends Perso {
-    $ptVie = null;
-    $ptEnd = null;
-    $sous = null;
-    $ptFor = null;
-    $ptExp = null;
-    $armeEquipe = null;
-    $armes = [];
+    protected $ptExp = null;
+
 }
+
 class Monstre extends Perso {
-    $ptVie = null;
-    $ptEnd = null;
-    $sous = null;
-    $ptFor = null;
-    $armeEquipe = null;
-    $armes = [];
-}
-class Pnj extends Perso {
-    $sous = null;
-    $armes = [];
+
 }
 
+class Pnj {
+    private $sous = null;
+    private $armes = [];
+}
+class Arme {
+    private $nomArme = null;
+    private $ptFor = null;
+    private $prix = null;
+    //protected $armes = [];
+}
+// defined weapons
+$epe = new Arme("Epe",9,15);
+$couteau = new Arme("Couteau",5,3);
+$ak47 = new Arme("AK47",28,25);
+$m16 = new Arme("M16",25,30);
+$m84 = new Arme("M84",150,50);
+
+$tableauArmes = [$epe, $couteau,$ak47, $m16, $m84];
+$armeSelectionnee = rand(0, count($tableauArmes) - 1);
 
 
 
@@ -45,16 +51,8 @@ class Pnj extends Perso {
 
 
 
-
-$epe = new Arme(10, 5);
-$ak47 = new Arme(5, 2);
-$couteau = new Arme(5, 2);
-$m16 = new Arme(5, 2);
-$m84 = new Arme(5, 2);
 
 $hero = new Hero($epe);
 
-
-$hero->arme
-
-class Fille extends Mere
+var_dump($hero);
+$hero->Arme;
