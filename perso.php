@@ -1,3 +1,4 @@
+<?php
 Class Perso {
     $ptVie = null;
     $ptEnd = null;
