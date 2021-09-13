@@ -21,7 +21,7 @@ class Hero extends Perso {
         $this->ptEndurance = 46;
         $this->sous = 46;
         $this->ptForce = 46;
-        $this->armeEquipe = "epe";
+        $this->armeEquipe = "épée";
       }
 
 }
@@ -33,7 +33,7 @@ class Monstre extends Perso {
         $this->ptEndurance = 35;
 //        $this->sous = 46;
         $this->ptForce = 35;
-        $this->armeEquipe = "epe";
+        $this->armeEquipe = "épée";
       }
 
 }
@@ -47,13 +47,13 @@ class Arme {
     public $prix = null;
 }
 // defined weapons
-$epe = new Arme(9,15);
+$épée = new Arme(9,15);
 $couteau = new Arme(5,3);
 $ak47 = new Arme(28,25);
 $m16 = new Arme(25,30);
 $m84 = new Arme(150,50);
 
-$tableauArmes = [$epe, $couteau,$ak47, $m16, $m84];
+$tableauArmes = [$épée, $couteau,$ak47, $m16, $m84];
 $armeSelectionnee = rand(0, count($tableauArmes) - 1);
 
 

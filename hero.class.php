@@ -12,7 +12,7 @@ Class Hero {
 }
 
 
-$epe = new Arme(10, 5);
+$épée = new Arme(10, 5);
 $ak47 = new Arme(5, 2);
 $couteau = new Arme(5, 2);
 $m16 = new Arme(5, 2);
