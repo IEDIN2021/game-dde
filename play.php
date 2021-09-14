@@ -15,20 +15,26 @@
     <div class="col-sm-11">
 <img src="img/hero.png"> <img class="monstre" src="img/monstre.png"> 
     </div>
+    <form method="post" action="play.php">
     <div class="col-sm-1 margintop15">
-    <p class="text-right"><a href="#"><button type="button" class="btn btn-primary edin">A</button></a></p>
-    <p class="text-right"><a href="#"><button type="button" class="btn btn-danger edin">B</button></a></p>
-    <p class="text-right"><a href="#"><button type="button" class="btn btn-success edin">C</button></a></p>
-    <p class="text-right"><a href="#"><button type="button" class="btn btn-success info">D</button></a></p>
+    <p class="text-right"><a href="#"><input type="submit" name="submit" value="A"class="btn btn-primary edin"></button></a></p>
+    <p class="text-right"><a href="#"><input type="submit" name="submit" value="B"class="btn btn-danger edin"></button></a></p>
+    <p class="text-right"><a href="#"><input type="submit" name="submit" value="C"class="btn btn-success edin"></button></a></p>
+    <p class="text-right"><a href="#"><input type="submit" name="submit" value="D"class="btn btn-success info"></button></a></p>
 
     </div>
   </div>
   <div class="row bg1"> 
     <div class="col-sm-1" >
-    <p class="text-center"><a href="#"><button type="button" class="btn btn-success edin">GO</button></a></p>
+    
+    <p class="text-center"><a href="#"><input type="submit" name="submit" value="GO"class="btn btn-success edin"></button></a></p>
+    </form>
     </div>
     <div class="col-sm-11 questions">
-<p class="textalter">Questions<p>
+<p class="textalter">
+<?php require_once ("questions.php") ?> 
+<?php echo $displayquestions ?>
+<p>
     </div>
   </div>
 </div>
