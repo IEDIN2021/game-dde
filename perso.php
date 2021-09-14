@@ -6,55 +6,81 @@ abstract class Perso {
     protected $sous = null;
     protected $ptForce = null;
     protected $armeEquipe = null;
-    protected $armes = [];
 
    /* public function __construct($arme) {
         $this->arme = $arme;
     }*/
 }
 
+
+
 class Hero extends Perso {
     protected $ptExp = null;
+    protected $armes = [];
 
-    function __construct() {
-        $this->ptVie = 40;
-        $this->ptEndurance = 46;
-        $this->sous = 46;
-        $this->ptForce = 46;
-        $this->armeEquipe = "épée";
+    function __construct($ptVie, $ptEndurance, $sous, $ptForce, $armeEquipe) {
+        $this->ptVie = $ptVie;
+        $this->ptEndurance = $ptEndurance;
+        $this->sous = $sous;
+        $this->ptForce = $ptForce;
+        $this->armeEquipe = $armeEquipe;
       }
 
 }
 
 class Monstre extends Perso {
 
-    function __construct() {
-        $this->ptVie = 50;
-        $this->ptEndurance = 35;
-//        $this->sous = 46;
-        $this->ptForce = 35;
-        $this->armeEquipe = "épée";
+    function __construct($ptVie, $ptEndurance, $sous, $ptForce, $armeEquipe) {
+        $this->ptVie = $ptVie;
+        $this->ptEndurance = $ptEndurance;
+        $this->sous = $sous;
+        $this->ptForce = $ptForce;
+        $this->armeEquipe = $armeEquipe;
       }
 
 }
 
 class Pnj {
-    private $sous = null;
-    private $armes = [];
+    public $armes = [];
+    function __construct($armes) {
+        $this->armes = $armes;
+    }
 }
 class Arme {
     public $ptFor = null;
     public $prix = null;
-}
-// defined weapons
-$épée = new Arme(9,15);
-$couteau = new Arme(5,3);
-$ak47 = new Arme(28,25);
-$m16 = new Arme(25,30);
-$m84 = new Arme(150,50);
 
-$tableauArmes = [$épée, $couteau,$ak47, $m16, $m84];
-$armeSelectionnee = rand(0, count($tableauArmes) - 1);
+    function __construct($ptFor, $prix) {
+        $this->ptFor = $ptFor;
+        $this->prix = $prix;
+    }
+}
+
+
+//création des objets monstre
+$monstre1 = new Monstre(30, 35, 12, 22, $epee);
+$monstre2 = new Monstre(35, 30, 34, 41, $ak47);
+$monstre3 = new Monstre(45, 25, 42, 34, $m84);
+
+//création de l'objet héro
+$hero = new hero(45, 25, 42, 34, $m84);
+ 
+//création de l'objet pnj
+$pnj = new pnj($tableauArmes);
+
+
+print('<pre> <hr>');
+var_dump($hero);
+print('<hr>');
+var_dump($pnj);
+print('<hr>');
+var_dump($monstre1);
+var_dump($monstre2);
+var_dump($monstre3);
+
+print('</pre>');
+
+
 
 
 
@@ -68,11 +94,11 @@ $armeSelectionnee = rand(0, count($tableauArmes) - 1);
 
 //$hero = new Hero ();
     
-$hero = new hero();
-$monstre = new monstre();
+// $hero = new hero();
+// $monstre = new monstre();
 
 
-var_dump($monstre);
+// var_dump($monstre);
 //$hero->Arme;
 
 ?>
