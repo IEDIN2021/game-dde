@@ -23,6 +23,12 @@ class Hero extends Perso {
       public function setPtvie($ptVie){
         $this->ptVie = $ptVie;
       }
+
+      
+
+
+
+      //$heroptViEct = $ptVie;
 /*
     public function attaque($monstre){
       $pointForceArme = $this->armeEquipe->getPtfor();

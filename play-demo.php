@@ -1,13 +1,13 @@
 <?php 
 
 $game = new Game();
-
+/*
 if ()
 
 $game.attack()
 $game.shop()
 
-
+*/
 
 
 
