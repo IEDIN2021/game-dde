@@ -1,5 +1,44 @@
 <?php 
 
+$game = new Game();
+
+if ()
+
+$game.attack()
+$game.shop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 require "./classes/perso.class.php";
 require "./classes/hero.class.php";
 require "./classes/monstre.class.php";
