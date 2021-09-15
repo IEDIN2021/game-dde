@@ -28,9 +28,23 @@ class Jeu {
 
         //création de l'objet héro
         $this->hero = new Hero(45, 25, 42, 34, $ak47);
+         
+        
+        $this->hero ->attaque($monstreA);
+        if ($monstreA->getPtvie() <= 0){
+        echo "Le Héro a gagné";            }
 
+        $this->monstreA ->attaque($hero);
+        if ($hero->getPtvie() <= 0){
+        echo "Le Héro a perdu";
+        }
+
+        print('<pre> <hr>');
+        var_dump($hero);
+
+        print('</pre>');
+        
+        
     }
-
-    
-    
+        
 }
