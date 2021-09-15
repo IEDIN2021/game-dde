@@ -18,9 +18,7 @@
     <form method="post" action="play.php">
     <div class="col-sm-1 margintop15">
     <p class="text-right"><a href="#"><input type="submit" name="submit" value="A"class="btn btn-primary edin"></button></a></p>
-    <p class="text-right"><a href="#"><input type="submit" name="submit" value="B"class="btn btn-danger edin"></button></a></p>
-    <p class="text-right"><a href="#"><input type="submit" name="submit" value="C"class="btn btn-success edin"></button></a></p>
-    <p class="text-right"><a href="#"><input type="submit" name="submit" value="D"class="btn btn-success info"></button></a></p>
+ 
 
     </div>
   </div>
