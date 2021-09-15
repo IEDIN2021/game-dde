@@ -13,6 +13,7 @@ abstract class Perso {
     
     //hero attaque l'ennemi
     public function attaque($ennemi){
+        //var_dump($this->armeEquipe);
         $pointForceArme = $this->armeEquipe->getPtfor();
         $pointVieEnnemi = $ennemi->getPtvie();
         $pointdeVieRestant = $pointVieEnnemi - $pointForceArme;

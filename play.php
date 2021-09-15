@@ -1,3 +1,15 @@
+<?php
+
+require_once ("./classes/jeu.class.php");
+$game = new Jeu();
+
+if(isset($_POST["go"])){
+  $game->attaque();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="FR">
 <head>
@@ -11,21 +23,25 @@
 </head>
 <body>
 <div id="gamecont" class="container gamecont">
+
+<div class="col-sm-6" style="background: #a4a4a4;border: 1px solid #8a7e7e;">Hero:<?php echo $game->getHero()->getPtvie(); ?></div>
+<div class="col-sm-6" style="background: #a4a4a4;border: 1px solid #8a7e7e;">Monstre: <?php echo $game->getMonstre()->getPtvie(); ?></div>
+
   <div class="row bg1">
     <div class="col-sm-11">
 <img src="img/hero.png"> <img class="monstre" src="img/monstre.png"> 
     </div>
-    <form method="post" action="play.php">
     <div class="col-sm-1 margintop15">
+    <form method="post" action="play.php">
     <p class="text-right"><a href="#"><input type="submit" name="submit" value="A"class="btn btn-primary edin"></button></a></p>
- 
-
+    </form>
+    
     </div>
   </div>
   <div class="row bg1"> 
     <div class="col-sm-1" >
-    
-    <p class="text-center"><a href="#"><input type="submit" name="submit" value="GO"class="btn btn-success edin"></button></a></p>
+<form method="post" action="play.php">
+    <p class="text-center"><a href="#"><input type="submit" name="go" value="GO"class="btn btn-success edin"></button></a></p>
     </form>
     </div>
     <div class="col-sm-11 questions">

@@ -17,6 +17,12 @@ class Jeu {
         $this->monstres = new monstres();
         $this->monstreA = new monstreA();
         */
+        $epee = new Arme(10, 5);
+        $ak47 = new Arme(5, 2);
+        $couteau = new Arme(5, 2);
+        $m16 = new Arme(5, 2);
+        $m84 = new Arme(5, 2);
+
 
         $this->monstres[] = new Monstre(30, 35, 12, 22, $epee);
         $this->monstres[] = new Monstre(35, 30, 34, 41, $ak47);
@@ -28,23 +34,31 @@ class Jeu {
 
         //création de l'objet héro
         $this->hero = new Hero(45, 25, 42, 34, $ak47);
-         
-        
-        $this->hero ->attaque($monstreA);
-        if ($monstreA->getPtvie() <= 0){
+                
+    }
+    
+    public function getHero(){
+        return $this->hero;
+    }
+    public function getMonstre(){
+        return $this->monstreA;
+    }
+    public function attaque(){
+        $this->hero ->attaque($this->monstreA);
+        if ($this->monstreA->getPtvie() <= 0){
         echo "Le Héro a gagné";            }
 
-        $this->monstreA ->attaque($hero);
-        if ($hero->getPtvie() <= 0){
-        echo "Le Héro a perdu";
+        $this->monstreA ->attaque($this->hero);
+        if ($this->hero->getPtvie() <= 0){
+            echo "Le Héro a perdu";
         }
 
-        print('<pre> <hr>');
-        var_dump($hero);
-
-        print('</pre>');
-        
-        
     }
+
+
+
+        
+        
+    
         
 }
