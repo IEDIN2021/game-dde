@@ -1,5 +1,5 @@
 <?php
-
+//Class fille : Arme.
 class Arme {
     private $ptFor = null;
     private $prix = null;
