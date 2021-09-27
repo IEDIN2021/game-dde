@@ -14,11 +14,6 @@ abstract class Perso {
         $pointdeVieRestant = $pointVieEnnemi - $pointForceArme;
         $ennemi->setPtvie($pointdeVieRestant);     
     }
-
-
-
-
-
 }
 
 
